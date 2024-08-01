@@ -1,0 +1,2 @@
+# binary_prediction_of_poisonous_mushrooms
+Kaggle getting started
