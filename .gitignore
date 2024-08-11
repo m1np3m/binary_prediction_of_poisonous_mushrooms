@@ -9,6 +9,9 @@ __pycache__/
 # automl
 AutogluonModels/
 
+# catboost
+*/catboost_info/
+
 # Distribution / packaging
 .Python
 build/
