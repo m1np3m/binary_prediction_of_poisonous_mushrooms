@@ -34,7 +34,7 @@ from datetime import datetime
 # helpers
 sys.path.append("..")
 from helpers.loss_functions import (
-    generate_submission,
+    update_submission,
 )
 
 now = int(datetime.now().timestamp())
@@ -167,7 +167,7 @@ print(f"Validation mcc score: {mcc}")
 # In[7]:
 
 
-generate_submission(
+update_submission(
     model=model,
     X_test=X_test,
     unique_target_values=lb.classes_.tolist(),

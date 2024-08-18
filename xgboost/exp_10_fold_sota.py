@@ -37,7 +37,7 @@ from hyper_params import (
 )
 
 sys.path.append("..")
-from helpers.loss_functions import generate_submission, prepare_submission
+from helpers.loss_functions import update_submission, finalize_submission
 
 SEED = 108
 random.seed(SEED)
@@ -135,7 +135,7 @@ import joblib as jl
 
 X_test_pkl = jl.load("../X_test.pkl")
 proba_preds = clf.predict_proba(X_test_pkl)
-generate_submission(
+update_submission(
     model=clf,
     X_test=X_test_pkl,
     unique_target_values=["e", "p"],
@@ -145,5 +145,5 @@ generate_submission(
 # In[9]:
 
 
-prepare_submission(strategy="mean")
+finalize_submission(strategy="mean")
 

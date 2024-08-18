@@ -61,7 +61,7 @@ def handle_categorical_columns(df: pd.DataFrame, n_common_values=15):
     return df, categorical_cols
 
 
-def generate_submission(
+def update_submission(
     model,
     X_test,
     unique_target_values=None,
@@ -89,7 +89,7 @@ def generate_submission(
     jl.dump(submit_df, "../submit_df.pkl")
 
 
-def prepare_submission(strategy: Literal["mean"] = "mean"):
+def finalize_submission(strategy: Literal["mean"] = "mean"):
     submit_pkl: pd.DataFrame = jl.load("../submit_df.pkl")
     lb = jl.load("../lb.pkl")
 
