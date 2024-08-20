@@ -1,0 +1,6 @@
+pandas
+numpy==1.26.4
+optuna
+catboost
+scikit-learn
+tqdm==2.2.3
